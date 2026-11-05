@@ -7,6 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#1d2b3a">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACr0lEQVR42u3cMUoDQRSA4Y3aW1vEWkgKQbBIKRZewMpesPEwNoK9lRcQFA9gZZHC2sbaAwhewMCbMLOPSb6vnl1h8ztZsy9OprPFAP/ZcQkQB+JAHIgDcSAOxIE4EAfiAHEgDsSBOBAH4kAciANxIA4QB+JAHIgDcSAOxIE4EAfiAHEgDsSBOBAH4kAciINNsdfipI/7LmyCqx87B95WEAfiQByIA3EgDhAH4kAciANxIA7EgTgQB+IAcSAOxIE4EAfiQByIA3EgDhiGodEXqU9enl3ZBKcXdg68rSAOxIE4EAfiQBwgDsRBHXtZP/j39Sy+ePf8LbLs8uE7fs6n64PIsvvbr/g5b+4OI8uWy4/4Oefz4+3aOYrKCK4vKiO4vqiM4PqiMtZY33ccpWVEjiotI3JUaRmRo9Z7pbP6cM+BOBAH4kAciANxIA7EgTgQx4iCT9GKjgo+RSs6KvgUreio9Z6iZT17y9k5SvuIrC/tI7K+tI/I+tJXOvGp7GQ6W1Q/6ee7b7wlOPKNN9yQIg7EgTgQB9shbfq8l0nxFlPyps+rlTHkTYq3mJI3fV6zjMhRLSbFW0zJmz7HDSniQBwgDsSBOBAH4kAciGOFXibFW0zJmz6v30fWpHiLKXnT56bPE5g+xw0p4kAciANxsCXSps97mRRvMSVv+rxaGUPepHiLKXnT5zXLiBzVy/9TN32OG1LEgThAHIgDcSAOxIE4EMcKvUyKt5iSN31ev4+sSfEWU/Kmz02fJzB9jhtSNjWO6vsbKdfczsHocdg8et827BwkxWHz6HrbaL5z6KPfMsZ4W9FHv9e2ySek//KxaXe/cuPFIZHuduKx48BfK4gDcSAOEAfiQByIA3EgDsSBOBAH4gBxIA7EgTgQB+JAHIgDcSAOxAHiQByIg+b+AARB0pq2fA8LAAAAAElFTkSuQmCC">
+<link rel="manifest" href="manifest.webmanifest">
 <title>Freischichtplaner</title>
 <style>
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -158,4 +159,5 @@ document.querySelectorAll("[data-d]").forEach(c=>{c.checked=S.days.includes(+c.d
 function applyFt(){if(S.ftColor)document.documentElement.style.setProperty("--ft",S.ftColor)}
 $("ftc").value=S.ftColor||"#d9822b";$("ftc").oninput=e=>{S.ftColor=e.target.value;applyFt();save()};applyFt();
 buildCols();sync();render();
-</script></body></html>
+</script>
+<script>if("serviceWorker" in navigator)window.addEventListener("load",function(){try{navigator.serviceWorker.register("sw.js").catch(function(){})}catch(e){}})</script></body></html>
